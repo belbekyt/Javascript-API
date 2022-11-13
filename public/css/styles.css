@@ -3,17 +3,21 @@
 @tailwind utilities;
 
 .list{
-    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3;
+    @apply grid grid-cols-1 justify-items-center sm:grid-cols-2 lg:grid-cols-3;
 }
 
 .card{
-    @apply max-w-md rounded border border-gray-700 m-4 h-fit;
+    @apply w-96 rounded-xl m-4 h-fit flex flex-col overflow-hidden shadow-2xl hover:translate-y-5 ease-in;
 }
 
 .title{
-    @apply text-2xl text-center my-2;
+    @apply text-2xl text-center font-bold my-2 my-10;
 }
 
 .photo{
-    @apply w-full;
+    @apply h-60;
+}
+
+.info-box{
+    @apply h-16 flex flex-row bg-pink-600 text-white;
 }

@@ -536,6 +536,7 @@ video {
 .list {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
+  justify-items: center;
 }
 
 @media (min-width: 640px) {
@@ -552,23 +553,43 @@ video {
 
 .card {
   margin: 1rem;
+  display: flex;
   height: -moz-fit-content;
   height: fit-content;
-  max-width: 28rem;
-  border-radius: 0.25rem;
-  border-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: rgb(55 65 81 / var(--tw-border-opacity));
+  width: 24rem;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.card:hover {
+  --tw-translate-y: 1.25rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .title {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
   text-align: center;
   font-size: 1.5rem;
   line-height: 2rem;
+  font-weight: 700;
 }
 
 .photo {
-  width: 100%;
+  height: 15rem;
+}
+
+.info-box {
+  display: flex;
+  height: 4rem;
+  flex-direction: row;
+  --tw-bg-opacity: 1;
+  background-color: rgb(219 39 119 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
