@@ -7,17 +7,26 @@
 }
 
 .card{
-    @apply w-96 rounded-xl m-4 h-fit flex flex-col overflow-hidden shadow-2xl hover:translate-y-5 ease-in;
+    @apply w-96 rounded-xl m-4 h-fit flex flex-col overflow-hidden shadow-2xl hover:translate-y-5 ease-in duration-200;
 }
 
 .title{
-    @apply text-2xl text-center font-bold my-2 my-10;
+    @apply text-2xl text-center font-bold my-5;
+}
+
+.description{
+    @apply mx-5 text-center mb-7;
 }
 
 .photo{
-    @apply h-60;
+    @apply h-60 border-b-2 border-gray-800;
 }
 
 .info-box{
-    @apply h-16 flex flex-row bg-pink-600 text-white;
+    @apply h-16 flex flex-row bg-gray-600 text-white text-center;
+}
+
+.info-box h3, .info-box p{
+    margin: 3px 10px;
+    font-size: 17px;
 }

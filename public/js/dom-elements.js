@@ -1,9 +1,12 @@
+const lorem = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ratione repellat nulla totam deserunt velit ad dolorum non facere, expedita quo dolore ullam, porro accusamus!"
+
 const createCountryElement = (country) => {
     const countryElement = document.createElement("li");
     countryElement.classList.add("card");
     countryElement.innerHTML = `
         <img class="photo" src=${country.flag}>
         <h2 class="title">${country.name}</h2>
+        <p class="description">${lorem}</p>
         <div class="info-box">
             <h3>Region: ${country.region}</h3>
             <p>Capital: ${country.capital}</p>
