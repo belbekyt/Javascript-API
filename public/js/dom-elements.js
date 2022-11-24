@@ -1,4 +1,5 @@
 const lorem = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ratione repellat nulla totam deserunt velit ad dolorum non facere, expedita quo dolore ullam, porro accusamus!"
+const inputValue = document.querySelector("#country-name");
 
 const createCountryElement = (country) => {
     const countryElement = document.createElement("li");
@@ -29,6 +30,10 @@ const createListElement = (countries) => {
 
 export const renderCountries = (countries) => {
     const rootElement = document.querySelector("#root");
+    rootElement.innerHTML = "";
     rootElement.appendChild(createListElement(countries));
-    console.log(countries);
 }
+
+inputValue.addEventListener("input", (e) => {
+    let value = e.target.value;
+})
