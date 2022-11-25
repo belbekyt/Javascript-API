@@ -1,6 +1,7 @@
 # Javascript-API
-Testing some operations on rest api with countries data.
+Descritpion:
+Getting data of all countries of the world by a Rest API and converting it into cards. You can search for a country by typing it name or choosing a region. 
 
-Using: HTML, CSS, JavaScript. Learning Tailwind-CSS and will try to use it here.
+Using: HTML, CSS, JavaScript and Tailwind-CSS (learning it, so might not be so good here).
 
-Status: IN PROGRES...
+Status: FINISHED
