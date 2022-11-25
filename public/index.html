@@ -17,9 +17,23 @@
     <header class="bg-zinc-100 py-4 mb-5">
         <h1 class="text-center font-bold text-2xl">COUNTRIES</h1>
     </header>
-    <div class="my-3 flex items-center">
-        <label for="country-name" class="ml-5 mr-2">Search a country:</label>
-        <input id="country-name" type="text" class="border border-black h-10 rounded-full pl-4">
+    <div class="w-full my-3 flex items-center justify-between mx-5">
+        <div>
+            <label for="country-name" class="mr-2">Search a country:</label>
+            <input id="country-name" name="country-name" type="text" class="border border-black h-10 rounded-full pl-4">
+        </div>
+        <div>
+            <label for="country-region">Choose a region</label>
+            <select name="country-region" id="country-region" class="border border-black h-10 rounded-full pl-2 mr-10">
+                <option value=""></option>
+                <option value="Americas">Americas</option>
+                <option value="Africa">Africa</option>
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europe</option>
+                <option value="Oceania">Oceania</option>
+                <option value="Antarctic">Antarctic</option>
+            </select>
+        </div>
     </div>
     <main id="root"></main>
 </body>

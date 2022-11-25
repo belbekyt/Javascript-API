@@ -4,17 +4,30 @@ const apiUrl = "https://restcountries.com/v3.1/all";
 let countries;
 const inputValue = document.querySelector("#country-name");
 let value = "";
+const regionInput = document.querySelector("#country-region");
+let regionValue = "";
 
 inputValue.addEventListener("input", (e) => {
-    fetching(e.target.value);
+    value = e.target.value;
+    fetching(value, regionValue);
 })
 
-let fetching = (value) => {
+regionInput.addEventListener("input", (e) => {
+    regionValue = e.target.value;
+    fetching(value, regionValue);
+})
+
+let fetching = (value, region) => {
     fetch(apiUrl)
     .then((res) => res.json())
     .then((res) => {
         countries = res.filter(country => {
-            return country.name.common.toLowerCase().includes(value.toLowerCase());
+            if(region != ""){
+                return country.name.common.toLowerCase().includes(value.toLowerCase()) && country.region.includes(region);
+            }
+            else{
+                return country.name.common.toLowerCase().includes(value.toLowerCase());
+            }
         })
         countries = countries.map((country) => {
             return{
@@ -29,4 +42,4 @@ let fetching = (value) => {
     });
 }
 
-fetching(value);
+fetching(value, regionValue);
